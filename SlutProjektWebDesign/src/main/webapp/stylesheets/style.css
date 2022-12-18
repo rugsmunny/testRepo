@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.cookie-modal {
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    animation: animatebackground 2s ease-in forwards;
+}
+.cookie-modal-content {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border: solid 2px black;
+    border-radius: 100%;
+    padding: 0;
+    outline: 0;
+    width: 30%;
+    height: 50%;
+    overflow: visible;
+    position: relative;
+    animation: animatetop 2s ease-in forwards;
+}
+
+@keyframes animatetop {
+    from {
+        top: -50%;
+        opacity: 0;
+    }
+    to {
+        top: 25%;
+        opacity: 1;
+        z-index: 5;
+
+    }
+}
+
+@keyframes animatetopreverse {
+    from {
+        top: 16%;
+        opacity: 1;
+        z-index: 5;
+    }
+    to {
+        top: -50%;
+        opacity: 0;
+    }
+}
+
+@keyframes animateforeground {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@keyframes animateforegroundreverse {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+
+    }
+}
+
+
+@keyframes animatebackground {
+    from {
+        z-index: -1;
+        background-color: rgba(0,0,0,0);
+    }
+    to {
+        z-index: 1;
+        background-color: rgba(0,0,0,0.4);
+    }
+}
+
+@keyframes animatebackgroundreverse {
+    from {
+        z-index: 1;
+        background-color: rgba(0,0,0,0.4);
+    }
+    to {
+        z-index: -1;
+        background-color: rgba(0,0,0,0);
+    }
+}
+
+@keyframes formanimation {
+    from {
+    transform: translate(0px,0px);
+        position: fixed;
+    }
+    to {
+    transform: translate(-40%,-33%);
+        position: fixed;
+    }
+}
+
+.btn-img {
+
+    background: transparent;
+    z-index: 4;
+    overflow-inline: visible;
+
+}
+.btn-img,
+.cookie-monster-img,
+.cookie-question{
+
+    -webkit-filter: drop-shadow(12px 12px 7px rgba(0,0,0,0.5));
+    drop-shadow(12px 12px 7px rgba(0,0,0,0.5));
+
+}
+
+.cookie-banner-text {
+
+    -webkit-filter: drop-shadow(8px 8px 3px rgba(0,0,0,0.4));
+drop-shadow(8px 8px 3px rgba(0,0,0,0.4));
+
+}
+
+
+.btn-img:hover {
+
+    transform: scale(110%);
+}
+.btn-img:active {
+    transform: translateY(4px);
+}
+
+.cookie-monster-img {
+    position: relative;
+    overflow: visible;
+    z-index: 4;
+    width: 349px;
+    height: 503px;
+}
+
+.cookie-question {
+    font-family: Comic Sans MS;
+    font-size: 20px;
+    color: blanchedalmond;
+    font-weight: bolder;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
